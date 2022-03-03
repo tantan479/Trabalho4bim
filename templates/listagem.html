@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Siape</th>
+        <th>Num_Alunos</th>
+        <th>Idade</th>
+    </tr>
+    {% for professor in lista %}
+        <tr>
+            <td>{{ professor.pid }}</td>
+            <td>{{ professor.nome }}</td>
+            <td>{{ professor.email }}</td>
+            <td>{{ professor.siape }}</td>
+            <td>{{ professor.num_alunos }}</td>
+            <td>{{ professor.idade }}</td>
+            <td><a href="/professor/{{ professor.pid }}">Editar</a></td>
+            <td><a href="/professor/remover/{{ professor.pid }}">Remover</a></td>            
+        </tr>
+    {% endfor %}
+</table>
+
+<a href=/professor/novo>Clique aqui para adicionar</a>

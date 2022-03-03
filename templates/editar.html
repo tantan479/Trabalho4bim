@@ -1,0 +1,21 @@
+<form action="{{ url_for("editar") }}" method="post">
+
+<input type="hidden" id="pid" name="pid" value="{{ professor.pid }}">
+
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" placeholder="Digite seu Nome" value="{{ professor.nome }}">
+
+<label for="email">E-mail:</label>
+<input type="text" id="email" name="email" placeholder="Digite seu E-mail" value="{{ professor.email }}">
+
+<label for="siape">Senha:</label>
+<input type="text" id="siape" name="siape" placeholder="Digite seu Siape" value="{{ professor.siape }}">
+
+<label for="num_alunos">Número de Alunos:</label>
+<input type="text" id="num_alunos" name="num_alunos" placeholder="Digite o número de alunos" value="{{ professor.num_alunos }}">
+
+<label for="num_alunos">Idade:</label>
+<input type="text" id="idade" name="idade" placeholder="Digite a sua idade" value="{{ professor.idade }}">
+
+
+<button type="submit">Salvar</button>
